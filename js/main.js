@@ -3,14 +3,19 @@ per i multipli di 3 stampi “Fizz” al posto del numero
 per i multipli di 5 stampi Buzz. 
 per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz. */
 
+var list = document.getElementById('list');
+
 for (var i = 1; i < 101; i++) {
+    
+    var listContent = list.innerHTML;
+
     if ( i % 3 == 0 && i % 5 == 0 ) {
-        console.log('FizzBuzz');
+        list.innerHTML = listContent + '<li>FizzBuzz</li>';
     } else if ( i % 5 == 0) {
-        console.log('Buzz');
+        list.innerHTML = listContent + '<li>Buzz</li>';
     } else if ( i % 3 == 0) {
-        console.log('Fizz');
+        list.innerHTML = listContent + '<li>Fizz</li>';
     } else {
-        console.log(i);
+        list.innerHTML = listContent + '<li>' + i + '</li>';
     }
 }
